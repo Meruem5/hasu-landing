@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!--
+    The app's lotus, simplified for small sizes: six petals instead of eight,
+    because at 16px the extra pair merges into a blob. Colours are the teal ramp
+    from the app's palette, with the dark-mode values the generator derives.
+  -->
+  <style>
+    .petal-outer { fill: #0F6E56; }
+    .petal-inner { fill: #1D9E75; }
+    .heart       { fill: #9FE1CB; }
+    @media (prefers-color-scheme: dark) {
+      .petal-outer { fill: #7ABAA4; }
+      .petal-inner { fill: #499F7E; }
+      .heart       { fill: #DEF0EB; }
+    }
+  </style>
+  <g transform="translate(24 24)">
+    <g class="petal-outer">
+      <ellipse cx="0" cy="-11.5" rx="5.4" ry="9.8" />
+      <ellipse cx="0" cy="-11.5" rx="5.4" ry="9.8" transform="rotate(60)" />
+      <ellipse cx="0" cy="-11.5" rx="5.4" ry="9.8" transform="rotate(120)" />
+      <ellipse cx="0" cy="-11.5" rx="5.4" ry="9.8" transform="rotate(180)" />
+      <ellipse cx="0" cy="-11.5" rx="5.4" ry="9.8" transform="rotate(240)" />
+      <ellipse cx="0" cy="-11.5" rx="5.4" ry="9.8" transform="rotate(300)" />
+    </g>
+    <g class="petal-inner">
+      <ellipse cx="0" cy="-7" rx="4.2" ry="6.6" transform="rotate(30)" />
+      <ellipse cx="0" cy="-7" rx="4.2" ry="6.6" transform="rotate(90)" />
+      <ellipse cx="0" cy="-7" rx="4.2" ry="6.6" transform="rotate(150)" />
+      <ellipse cx="0" cy="-7" rx="4.2" ry="6.6" transform="rotate(210)" />
+      <ellipse cx="0" cy="-7" rx="4.2" ry="6.6" transform="rotate(270)" />
+      <ellipse cx="0" cy="-7" rx="4.2" ry="6.6" transform="rotate(330)" />
+    </g>
+    <circle class="heart" cx="0" cy="0" r="4.4" />
+  </g>
+</svg>
