@@ -23,6 +23,7 @@ is the one that must not go stale.
 - `privacy.html` — the privacy policy
 - `assets/style.css` — the **single shared stylesheet** for every page
 - `assets/favicon.svg` — the lotus, six petals, dark-mode aware
+- `favicon.ico` — root-level fallback, 16/32/48; generated, see below
 - `assets/og-image.png`, `assets/apple-touch-icon.png` — generated, see below
 - `robots.txt`, `sitemap.xml`, `CNAME` — hosting and crawlers
 
@@ -49,6 +50,12 @@ site and the app stay the same colour.
 **The lotus is one drawing in three places** — `assets/favicon.svg`, the inline
 SVG in the page headers, and `scripts/generate-assets.swift`. They share petal
 counts and proportions on purpose. Change them together.
+
+**The SVG favicon is the dark-mode-aware one; `favicon.ico` is not.** An .ico
+cannot carry a media query, so it puts the flower on a pale teal disc that reads
+on a light and a dark tab bar alike, instead of inverting. Both are declared in
+every page's `<head>` — SVG for browsers that support it, .ico for the rest and
+for clients that guess the root path.
 
 ## Values repeated across files
 

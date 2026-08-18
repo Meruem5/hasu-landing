@@ -30,6 +30,13 @@
 
   <meta name="theme-color" content="#0F6E56" />
 
+  <!--
+    Both icons are declared on purpose. A browser that understands SVG takes the
+    second one, which follows the tab bar into dark mode; everything else falls
+    back to the .ico. The .ico is also at the site root because crawlers and
+    link unfurlers request /favicon.ico without reading this markup.
+  -->
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/style.css" />

@@ -45,11 +45,18 @@ the file if you change the setting in the UI, so prefer editing one place.
 
 ## Regenerating the raster assets
 
-`assets/og-image.png` and `assets/apple-touch-icon.png` are committed artifacts,
-generated from the same lotus geometry as the favicon and the app icon:
+`favicon.ico`, `assets/og-image.png` and `assets/apple-touch-icon.png` are
+committed artifacts, generated from the same lotus geometry as
+`assets/favicon.svg` and the app icon:
 
 ```bash
 swift scripts/generate-assets.swift
 ```
 
 This is the only script in the repo and it is not part of serving the site.
+
+`favicon.ico` holds three images (16, 32 and 48px) rather than one, and the two
+small ones drop the flower's inner petal ring — below roughly 24px it lands in
+the gaps of the outer ring and the two tones blur into one. It lives at the root
+rather than in `assets/` because clients request `/favicon.ico` by convention
+without reading the HTML.
